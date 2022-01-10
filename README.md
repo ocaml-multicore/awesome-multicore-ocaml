@@ -4,6 +4,8 @@ A collection of libraries, experiments and ideas relating to OCaml 5 (multicore 
 
 This repository collects useful libraries, ideas and experiments relating to the use of Multicore OCaml features: primarily parallelism with domains and direct-style code with effects.
 
+For contributing, [see the guide](https://github.com/patricoferris/awesome-multicore-ocaml/blob/main/CONTRIBUTING.md).
+
 ## Table of Contents
 - [Libraries](#libraries)
   - [Eio](#eio)
@@ -13,6 +15,8 @@ This repository collects useful libraries, ideas and experiments relating to the
   - [Ppx_effects](#ppx_effects)
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
+- [Ideas]
+  - [Non-blocking Codec](#non-blocking-codec)
 - [Resources](#resources)
     - [Wiki](#wiki)
     - [Monthlies](#monthlies)
@@ -65,6 +69,16 @@ The [gemini protocol](https://gemini.circumlunar.space/docs/faq.gmi) implemented
 Repository: https://github.com/dhil/ocaml-multicont
 
 Built on top of the continuations in Multicore OCaml, `ocaml-multicont` provides a library for using continuations that can be applied more than once. See also [this discussion on discuss](https://discuss.ocaml.org/t/multi-shot-continuations-gone-forever/9072).
+
+## Ideas
+
+Even less further on than [experiments](#experiments), the *ideas* section contains projects that would benefit from the features of Multicore OCaml.
+
+### Non-blocking Codec
+
+Repository: https://github.com/dbuenzli/nbcodec
+
+Many libraries and tools written in the nbcodec style would benefit from continuations given by effect handlers in Multicore OCaml, including libraries like [jsonm](https://github.com/dbuenzli/jsonm) or [xmlm](https://github.com/dbuenzli/xmlm) perhaps.
 
 ## Resources
 
