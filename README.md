@@ -2,7 +2,7 @@
 
 A collection of libraries, experiments and ideas relating to OCaml 5 (multicore + effects). With the [merging](https://github.com/ocaml/ocaml/pull/10831#issuecomment-1008935795) of the main `multicore-ocaml` branch into OCaml `trunk`, a parallel and effectful world is fast approaching.
 
-This repository collects useful libraries, ideas and experiments relating to the use of Multicore OCaml features: primarily parallelism with domains and direct-style code with effects.
+This repository collects useful libraries, ideas and experiments relating to the use of Multicore OCaml features (primarily parallelism with domains and direct-style code with effects).
 
 For contributing, [see the guide](https://github.com/patricoferris/awesome-multicore-ocaml/blob/main/CONTRIBUTING.md).
 
@@ -28,7 +28,7 @@ For contributing, [see the guide](https://github.com/patricoferris/awesome-multi
 
 Repository: https://github.com/ocaml-multicore/eio
 
-Eio implements an effects-based direct-style IO stack for multicore OCaml. It supports multiple backends including a performant [io-uring](https://unixism.net/loti/what_is_io_uring.html) one and a portable, [libuv](http://docs.libuv.org/en/v1.x/) backend.
+Eio implements an effects-based direct-style IO stack for multicore OCaml. It supports multiple backends including a performant [io-uring](https://unixism.net/loti/what_is_io_uring.html) one and a portable [libuv](http://docs.libuv.org/en/v1.x/) backend.
 
 ### Domainslib
 
@@ -37,6 +37,11 @@ Repository: https://github.com/ocaml-multicore/domainslib
 Domainslib provides data-structures for parallel programming on top of multicore primitives. This includes a work-stealing task pool and channels for inter-domain communication.
 
 ### Lwt Support
+
+Some useful and relevant OCaml.5 x Lwt discussions:
+
+ - [Is mixing lwt and multicore safe?](https://discuss.ocaml.org/t/is-mixing-lwt-and-multicore-safe/8714)
+ - [Multicore, Async and Lwt](https://discuss.ocaml.org/t/multicore-async-and-lwt/2687)
 
 #### Lwt_eio
 
@@ -95,6 +100,14 @@ The OCaml monthlies are available on discuss: https://discuss.ocaml.org/tag/mult
 
 ### Benchmarks
 
+#### Sandmark
+
 Repository: https://github.com/ocaml-bench/sandmark
 
 > Sandmark is a suite of OCaml benchmarks and a collection of tools to configure different compiler variants, run and visualise the results.
+
+#### Http Benchmarks
+
+Repository: https://github.com/ocaml-multicore/retro-httpaf-bench
+
+A collection of HTTP servers including ones in Go, Rust, multiple OCaml implementations and OCaml with effects.
