@@ -15,6 +15,7 @@ For contributing, [see the guide](https://github.com/patricoferris/awesome-multi
   - [Ppx_effects](#ppx_effects)
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
+  - [Js_of_ocaml support](#js_of_ocaml)
 - [Ideas](#ideas)
   - [Non-blocking Codec](#non-blocking-codec)
 - [Resources](#resources)
@@ -74,6 +75,12 @@ The [gemini protocol](https://gemini.circumlunar.space/docs/faq.gmi) implemented
 Repository: https://github.com/dhil/ocaml-multicont
 
 Built on top of the continuations in Multicore OCaml, `ocaml-multicont` provides a library for using continuations that can be applied more than once. See also [this discussion on discuss](https://discuss.ocaml.org/t/multi-shot-continuations-gone-forever/9072).
+
+### Js_of_ocaml
+
+Repository: https://github.com/ocsigen/js_of_ocaml
+
+It is not immediately clear how (and when) effects will be supported in js_of_ocaml (an OCaml bytecode to Javascript compiler). [This discussion provides more information](https://discuss.ocaml.org/t/ocaml-multicore-effects-and-js-of-ocaml/8502). See also [some work on using CPS to achieve working Javascript](https://github.com/Armael/js_of_ocaml).
 
 ## Ideas
 
