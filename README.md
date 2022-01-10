@@ -15,7 +15,7 @@ For contributing, [see the guide](https://github.com/patricoferris/awesome-multi
   - [Ppx_effects](#ppx_effects)
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
-- [Ideas]
+- [Ideas](#ideas)
   - [Non-blocking Codec](#non-blocking-codec)
 - [Resources](#resources)
     - [Wiki](#wiki)
