@@ -1,0 +1,3 @@
+[submodule "eio"]
+	path = eio
+	url = https://github.com/ocaml-multicore/eio
