@@ -8,12 +8,15 @@ For contributing, [see the guide](https://github.com/patricoferris/awesome-multi
 
 If you are wondering what even is Multicore OCaml, you could start by watching [a video from 2014 about Multicore OCaml by Stephen Dolan and co.](https://watch.ocaml.org/videos/watch/490b5363-01b6-45d8-9b7e-c883a20026a1), then [one on how to parallelise your OCaml code](https://watch.ocaml.org/videos/watch/ce20839e-4bfc-4d74-925b-485a6b052ddf) and [how we can adapt the existing ecosystem to support Multicore OCaml](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02). For more resources like this, check the [Multicore OCaml wiki](#wiki).
 
+*There's a WIP PR to start submoduling repositories so it can be a one-stop shop for taking OCaml 5.00 for a spin, see [the PR](https://github.com/patricoferris/awesome-multicore-ocaml/pull/1)*.
+
 ## Table of Contents
 - [Libraries](#libraries)
   - [Eio](#eio)
   - [Domainslib](#domainslib)
   - [Lwt Support](#lwt-support)
 - [Experiments](#experiments)
+  - [Dream](#dream)
   - [Ppx_effects](#ppx_effects)
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
@@ -59,6 +62,12 @@ Repository: https://github.com/ocsigen/lwt
 Not yet released, [upstream lwt](https://github.com/ocsigen/lwt/tree/master/src/domain) now has a package called `lwt-domain`. This provides useful functions for programming with Lwt and [Domainslib](#domainslib).
 
 ## Experiments
+
+### Dream
+
+Repository: https://github.com/talex5/dream/tree/eio
+
+See also the [draft PR](https://github.com/aantron/dream/pull/194) that uses [Dream](https://github.com/aantron/dream), Eio and [lwt_eio](#lwt-eio) to provide a direct-style interface to Dream.
 
 ### Ppx_effects
 
