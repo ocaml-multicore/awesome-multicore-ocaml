@@ -8,6 +8,18 @@ For contributing, [see the guide](https://github.com/patricoferris/awesome-multi
 
 If you are wondering what even is Multicore OCaml, you could start by watching [a video from 2014 about Multicore OCaml by Stephen Dolan and co.](https://watch.ocaml.org/videos/watch/490b5363-01b6-45d8-9b7e-c883a20026a1), then [one on how to parallelise your OCaml code](https://watch.ocaml.org/videos/watch/ce20839e-4bfc-4d74-925b-485a6b052ddf) and [how we can adapt the existing ecosystem to support Multicore OCaml](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02). For more resources like this, check the [Multicore OCaml wiki](#wiki).
 
+## A Multicore Monorepo
+
+This repository also acts as a mono-repository of sorts. Some of the libraries and experiments below are submoduled here along with useful pinned version of packages in the opam file to allow the entire repository to be built using dune. You should be able to:
+
+```sh
+opam update
+opam switch create . 5.00+trunk --no-install
+opam pin . -yn
+opam install . -y
+dune build @install
+```
+
 ## Table of Contents
 - [Libraries](#libraries)
   - [Eio](#eio)

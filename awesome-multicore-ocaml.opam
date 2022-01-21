@@ -9,9 +9,6 @@ depends: [
   "ocaml" {>= "5.00.0+trunk"}
   "dune" {>= "2.0"}
 ]
-conflicts: [
-  "carton" {< "0.4.2"}
-]
 build: [
   ["dune" "subst"] {pinned}
   [
@@ -49,4 +46,10 @@ pin-depends: [
     "base" "git+https://github.com/patricoferris/base#5.00"
     # Thanks to @pitag-ha :))
     "ppxlib" "git+https://github.com/patricoferris/ppxlib#5.00"
+    # Thanks to @nojb :))
+    "easy-format" "git+https://github.com/nojb/easy-format#4568bfa1887146ab6ce41a48c9e00c8c1329c6e4"
+    # Thanks to fpottier :))
+    "menhir" "git+https://gitlab.inria.fr/fpottier/menhir#cea506b862ddc34fb6a25b60ae145b755a0db737"
+    "menhirLib" "git+https://gitlab.inria.fr/fpottier/menhir#cea506b862ddc34fb6a25b60ae145b755a0db737"
+    "menhirSdk" "git+https://gitlab.inria.fr/fpottier/menhir#cea506b862ddc34fb6a25b60ae145b755a0db737"
 ]

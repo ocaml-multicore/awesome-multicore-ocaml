@@ -1,0 +1,4 @@
+(lang dune 2.9)
+; Dream's use of Stdlib.Stream
+(env
+ (_ (flags -w -3)))
