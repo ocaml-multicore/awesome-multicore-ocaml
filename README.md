@@ -6,7 +6,11 @@ This repository collects useful libraries, ideas and experiments relating to the
 
 For contributing, [see the guide](https://github.com/patricoferris/awesome-multicore-ocaml/blob/main/CONTRIBUTING.md).
 
-If you are wondering what even is Multicore OCaml, you could start by watching [a video from 2014 about Multicore OCaml by Stephen Dolan and co.](https://watch.ocaml.org/videos/watch/490b5363-01b6-45d8-9b7e-c883a20026a1), then [one on how to parallelise your OCaml code](https://watch.ocaml.org/videos/watch/ce20839e-4bfc-4d74-925b-485a6b052ddf) and [how we can adapt the existing ecosystem to support Multicore OCaml](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02). For more resources like this, check the [Multicore OCaml wiki](#wiki).
+If you are wondering what even is Multicore OCaml, you could start by watching [a video from 2014 about Multicore OCaml by Stephen Dolan and co.](https://watch.ocaml.org/videos/watch/490b5363-01b6-45d8-9b7e-c883a20026a1), then [one on how to parallelise your OCaml code](https://watch.ocaml.org/videos/watch/ce20839e-4bfc-4d74-925b-485a6b052ddf) and [how we can adapt the existing ecosystem to support Multicore OCaml](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02).
+
+For understanding effects in OCaml 5 you can watch [KC Sivaramakrishnan's Effective Programming in OCaml 5 talk](https://www.youtube.com/watch?v=xKUzN-McZUk) and also Thomas Leonard's talk at the [2021 OCaml Workshop](https://v3.ocaml.org/workshops/ocaml-workshop-2021) on [Experiences with Effects](https://watch.ocaml.org/videos/watch/74ece0a8-380f-4e2a-bef5-c6bb9092be89).
+
+For more resources like this, check the [Multicore OCaml wiki](#wiki).
 
 *There's a WIP PR to start submoduling repositories so it can be a one-stop shop for taking OCaml 5.00 for a spin, see [the PR](https://github.com/patricoferris/awesome-multicore-ocaml/pull/1)*.
 
