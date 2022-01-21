@@ -63,7 +63,7 @@ Repository: https://github.com/talex5/lwt_eio
 
 Repository: https://github.com/ocsigen/lwt
 
-Not yet released, [upstream lwt](https://github.com/ocsigen/lwt/tree/master/src/domain) now has a package called `lwt-domain`. This provides useful functions for programming with Lwt and [Domainslib](#domainslib).
+Lwt now has a package called [`lwt-domain`](https://github.com/ocsigen/lwt/tree/master/src/domain). This provides useful functions for programming with Lwt and [Domainslib](#domainslib).
 
 ## Experiments
 
