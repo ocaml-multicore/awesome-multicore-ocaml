@@ -37,12 +37,16 @@ pin-depends: [
     "uutf" "git+https://github.com/patricoferris/uutf#5.00"
     # New, immutable Ephemerons
     "sexplib0" "git+https://github.com/patricoferris/sexplib0#5.00"
+    # Obj.Ext...
+    "sexplib" "git+https://github.com/patricoferris/sexplib#5.00"
+    # Needed because I did the changes to sexplib off of the main branch...
+    "ppx_sexp_conv" "git+https://github.com/janestreet/ppx_sexp_conv"
     # Format changes are fixed but unreleased, disable warnings
     "notty" "git+https://github.com/patricoferris/notty#5.00"
     # String.uppercase
     "lwt.5.5.0" "git+https://github.com/patricoferris/lwt#5.00"
-    # Attempted port to 5.0.0 -- also needs to be < 2 for ppx_cstruct (?)
-    "ocaml-migrate-parsetree.1.8.0" "git+https://github.com/patricoferris/ocaml-migrate-parsetree#5.00"
     # A quick few fixes, probably not was going to happen upstream
     "base" "git+https://github.com/patricoferris/base#5.00"
+    # Thanks to @pitag-ha :))
+    "ppxlib" "git+https://github.com/patricoferris/ppxlib#5.00"
 ]

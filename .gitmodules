@@ -1,3 +1,6 @@
 [submodule "eio"]
 	path = eio
 	url = https://github.com/ocaml-multicore/eio
+[submodule "gemini-eio"]
+	path = gemini-eio
+	url = https://gitlab.com/talex5/gemini-eio
