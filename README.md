@@ -21,6 +21,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Lwt Support](#lwt-support)
 - [Experiments](#experiments)
   - [Dream](#dream)
+  - [Cohttp](#cohttp)
   - [Ppx_effects](#ppx_effects)
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
@@ -72,6 +73,12 @@ Lwt now has a package called [`lwt-domain`](https://github.com/ocsigen/lwt/tree/
 Repository: https://github.com/talex5/dream/tree/eio
 
 See also the [draft PR](https://github.com/aantron/dream/pull/194) that uses [Dream](https://github.com/aantron/dream), Eio and [lwt_eio](#lwt-eio) to provide a direct-style interface to Dream.
+
+### Cohttp
+
+Repository: https://github.com/bikallem/ocaml-cohttp/tree/eio-3
+
+Two PRs exist on the [cohttp repository](https://github.com/mirage/cohttp) (an OCaml library for building HTTP servers and clients). One for adding a [direct-style implementation using just Eio](https://github.com/mirage/ocaml-cohttp/pull/857). Another to [convert the Lwt server implementation to direct-style](https://github.com/mirage/ocaml-cohttp/pull/854) using [lwt_eio](#lwt-eio).
 
 ### Ppx_effects
 
