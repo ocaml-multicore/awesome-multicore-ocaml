@@ -78,7 +78,7 @@ See also the [draft PR](https://github.com/aantron/dream/pull/194) that uses [Dr
 
 Repository: https://github.com/bikallem/ocaml-cohttp/tree/eio-3
 
-Two PRs exist on the [cohttp repository](https://github.com/mirage/cohttp) (an OCaml library for building HTTP servers and clients). One for adding a [direct-style implementation using just Eio](https://github.com/mirage/ocaml-cohttp/pull/857). Another to [convert the Lwt server implementation to direct-style](https://github.com/mirage/ocaml-cohttp/pull/854) using [lwt_eio](#lwt-eio).
+Two PRs exist on the [cohttp repository](https://github.com/mirage/ocaml-cohttp) (an OCaml library for building HTTP servers and clients). One for adding a [direct-style implementation using just Eio](https://github.com/mirage/ocaml-cohttp/pull/857). Another to [convert the Lwt server implementation to direct-style](https://github.com/mirage/ocaml-cohttp/pull/854) using [lwt_eio](#lwt-eio).
 
 ### Ppx_effects
 
