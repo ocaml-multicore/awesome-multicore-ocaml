@@ -39,7 +39,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
 
 Repository: https://github.com/ocaml-multicore/eio
 
-Eio implements an effects-based direct-style IO stack for multicore OCaml. It supports multiple backends including a performant [io-uring](https://unixism.net/loti/what_is_io_uring.html) one and a portable [libuv](http://docs.libuv.org/en/v1.x/) backend.
+Eio implements an effects-based direct-style IO stack for multicore OCaml. It supports multiple backends including a performant [io-uring](https://unixism.net/loti/what_is_io_uring.html) one and a portable [libuv](http://docs.libuv.org/en/v1.x/) backend. A [0.1 release](https://github.com/ocaml/opam-repository/pull/20695) is now available from opam-repository.
 
 ### Domainslib
 
@@ -58,7 +58,7 @@ Some useful and relevant OCaml.5 x Lwt discussions:
 
 Repository: https://github.com/talex5/lwt_eio
 
-`Lwt_eio` provides an "lwt engine" using [Eio](#eio) making it possible to use both Eio and Lwt in the same codebase (there are quite a few caveats however).
+`Lwt_eio` provides an "lwt engine" using [Eio](#eio) making it possible to use both Eio and Lwt in the same codebase. A [0.1 release](https://github.com/ocaml/opam-repository/pull/20701) is now available from opam-repository.
 
 #### Lwt_domain
 
