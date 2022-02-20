@@ -30,6 +30,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Non-blocking Codec](#non-blocking-codec)
 - [Resources](#resources)
     - [Wiki](#wiki)
+    - [Discuss Threads](#discuss-threads)
     - [Monthlies](#monthlies)
     - [Benchmarks](#benchmarks)
 
@@ -122,6 +123,16 @@ The [Multicore OCaml Wiki](https://github.com/ocaml-multicore/ocaml-multicore/wi
 
   - [Effects examples](https://github.com/ocaml-multicore/effects-examples): a collection of great examples with effects including cooperative threading and generators.
   - [Parallel Programming in Multicore OCaml](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml): a very good introduction to programming parallel programs in Multicore OCaml, including [using Domainslib](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml#domainslib).
+
+### Discuss Threads
+
+Recently, there has been a lot of great discussion on discuss.ocaml.org around OCaml 5, in particular what the ramifications of adding effects to the language will have to the ecosystem:
+
+ - The [initial release](https://discuss.ocaml.org/t/eio-0-1-effects-based-direct-style-io-for-ocaml-5/9298) of Eio has a lot of dicussion around what it could mean if the library became the official "OCaml IO" library. It also has some useful conversations about the underlying use of effects in Eio and in particular the [set of private effects used](https://v3.ocaml.org/p/eio/0.1/doc/Eio/Private/Effects/index.html).
+   + An excellent write up about [scopes and effect handlers](https://hackmd.io/@yF_ntUhmRvKUt15g7m1uGw/Bk-5NXh15) was added in this [thread](https://discuss.ocaml.org/t/eio-0-1-effects-based-direct-style-io-for-ocaml-5/9298/91).
+ - Another thread, ["How to block in an agnostic way"](https://discuss.ocaml.org/t/how-to-block-in-an-agnostic-way/9368), is a discussion about blocking code where we are agnostic to the underlying concurrency abstraction (and indeed how to do [interop between libraries](https://discuss.ocaml.org/t/how-to-block-in-an-agnostic-way/9368/4)).
+ - Another more Eio-specific thread looks at [cancellation in the presence of concurrency from effects](https://discuss.ocaml.org/t/understanding-cancellation-in-eio/9369).
+ - In [How do spawn and join interact with try_with](https://discuss.ocaml.org/t/multicore-how-do-spawn-and-join-interact-with-try-with/9362) there's a great, short discussion about effects in the presence of multiple domains. A "gotcha" many (myself included) are likely to hit when getting started with OCaml 5.
 
 ### Monthlies
 
