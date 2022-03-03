@@ -17,6 +17,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
 ## Table of Contents
 - [Libraries](#libraries)
   - [Eio](#eio)
+  - [Affect](#affect)
   - [Domainslib](#domainslib)
   - [Lwt Support](#lwt-support)
 - [Experiments](#experiments)
@@ -41,6 +42,12 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
 Repository: https://github.com/ocaml-multicore/eio
 
 Eio implements an effects-based direct-style IO stack for multicore OCaml. It supports multiple backends including a performant [io-uring](https://unixism.net/loti/what_is_io_uring.html) one and a portable [libuv](http://docs.libuv.org/en/v1.x/) backend. A [0.1 release](https://github.com/ocaml/opam-repository/pull/20695) is now available from opam-repository.
+
+### Affect
+
+Repository: https://erratique.ch/software/affect
+
+> Affect provides composable concurrency primitives for OCaml using the effect handlers available in OCaml 5.0. Affect should be seen as an experiment at that point.
 
 ### Domainslib
 
