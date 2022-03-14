@@ -140,6 +140,7 @@ Recently, there has been a lot of great discussion on discuss.ocaml.org around O
  - Another thread, ["How to block in an agnostic way"](https://discuss.ocaml.org/t/how-to-block-in-an-agnostic-way/9368), is a discussion about blocking code where we are agnostic to the underlying concurrency abstraction (and indeed how to do [interop between libraries](https://discuss.ocaml.org/t/how-to-block-in-an-agnostic-way/9368/4)).
  - Another more Eio-specific thread looks at [cancellation in the presence of concurrency from effects](https://discuss.ocaml.org/t/understanding-cancellation-in-eio/9369).
  - In [How do spawn and join interact with try_with](https://discuss.ocaml.org/t/multicore-how-do-spawn-and-join-interact-with-try-with/9362) there's a great, short discussion about effects in the presence of multiple domains. A "gotcha" many (myself included) are likely to hit when getting started with OCaml 5.
+ - There is a great discussion about using effects for a [roguelike](https://en.wikipedia.org/wiki/Roguelike) game in [Tutorial: Roguelike with Effect Handlers](https://discuss.ocaml.org/t/tutorial-roguelike-with-effect-handlers/9422) (the full tutorial [is here](https://hackmd.io/@yF_ntUhmRvKUt15g7m1uGw/BJBZ7TMeq)). Related to that is another excellent article about coding [animations with effect handlers](https://gopiandcode.uk/logs/log-bye-bye-monads-algebraic-effects.html).
 
 ### Monthlies
 
