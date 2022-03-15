@@ -20,6 +20,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Affect](#affect)
   - [Domainslib](#domainslib)
   - [Lwt Support](#lwt-support)
+  - [Parany](#parany)
 - [Experiments](#experiments)
   - [Dream](#dream)
   - [Cohttp](#cohttp)
@@ -73,6 +74,12 @@ Repository: https://github.com/talex5/lwt_eio
 Repository: https://github.com/ocsigen/lwt
 
 Lwt now has a package called [`lwt-domain`](https://github.com/ocsigen/lwt/tree/master/src/domain). This provides useful functions for programming with Lwt and [Domainslib](#domainslib).
+
+### Parany
+
+Repository: https://github.com/UnixJunkie/parany/tree/domains
+
+The Parany git branch called "domains" is compatible with multicore-ocaml.
 
 ## Experiments
 
