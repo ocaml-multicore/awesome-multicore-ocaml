@@ -21,6 +21,8 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Domainslib](#domainslib)
   - [Lwt Support](#lwt-support)
   - [Parany](#parany)
+- [Testing](#testing)
+  - [multicoretests](#multicoretests)
 - [Experiments](#experiments)
   - [Dream](#dream)
   - [Cohttp](#cohttp)
@@ -80,6 +82,15 @@ Lwt now has a package called [`lwt-domain`](https://github.com/ocsigen/lwt/tree/
 Repository: https://github.com/UnixJunkie/parany/tree/domains
 
 The Parany git branch called "domains" is compatible with multicore-ocaml.
+
+## Testing
+
+### Multicoretests
+
+Repository: https://github.com/jmid/multicoretests
+
+Experimental property-based tests of (parts of) the OCaml multicore compiler. The project contains a randomized testsuite of OCaml 5.0 based on QCheck and 
+two reusable testing libraries `Lin` and `STM`.
 
 ## Experiments
 
