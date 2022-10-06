@@ -15,14 +15,21 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
 *There's a WIP PR to start submoduling repositories so it can be a one-stop shop for taking OCaml 5.00 for a spin, see [the PR](https://github.com/patricoferris/awesome-multicore-ocaml/pull/1)*.
 
 ## Table of Contents
+- [Installation](#installation)
 - [Libraries](#libraries)
   - [Eio](#eio)
   - [Affect](#affect)
   - [Domainslib](#domainslib)
+  - [Lockfree](#lockfree)
   - [Lwt Support](#lwt-support)
+  - [Async Support](#async-support)
   - [Parany](#parany)
+  - [Processor](#ocaml-processor)
 - [Testing](#testing)
   - [multicoretests](#multicoretests)
+- [Tooling](#tooling)
+  - [Olly](#olly)
+  - [Eio-console](#eio-console)
 - [Experiments](#experiments)
   - [Dream](#dream)
   - [Cohttp](#cohttp)
@@ -30,6 +37,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
   - [Js_of_ocaml support](#js_of_ocaml)
+  - [Mirage network](#mirage-networking-experiments)
 - [Ideas](#ideas)
   - [Non-blocking Codec](#non-blocking-codec)
 - [Resources](#resources)
@@ -37,6 +45,18 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
     - [Discuss Threads](#discuss-threads)
     - [Monthlies](#monthlies)
     - [Benchmarks](#benchmarks)
+
+## Installation
+
+The OCaml 5 compiler is currently at the `5.0.0~alpha1` release. The compiler can be obtained with the following instructions on Linux and Mac machines.
+
+```
+λ opam update
+λ opam switch create 5.0.0~alpha1 --repo=default,alpha=git+https://github.com/kit-ty-kate/opam-alpha-repository.git
+λ eval $(opam env)
+```
+
+If you're using opam version 2.0, please also add the beta repository during installation - `beta=git+https://github.com/ocaml/ocaml-beta-repository.git`
 
 ## Libraries
 
@@ -58,6 +78,12 @@ Repository: https://github.com/ocaml-multicore/domainslib
 
 Domainslib provides data-structures for parallel programming on top of multicore primitives. This includes a work-stealing task pool and channels for inter-domain communication.
 
+### Lockfree
+
+Repository: https://github.com/ocaml-multicore/lockfree
+
+Lock-free is collection of [non-blocking](https://en.wikipedia.org/wiki/Non-blocking_algorithm) data structures for multicore OCaml.
+
 ### Lwt Support
 
 Some useful and relevant OCaml.5 x Lwt discussions:
@@ -77,11 +103,25 @@ Repository: https://github.com/ocsigen/lwt
 
 Lwt now has a package called [`lwt-domain`](https://github.com/ocsigen/lwt/tree/master/src/domain). This provides useful functions for programming with Lwt and [Domainslib](#domainslib).
 
+### Async Support
+
+#### Async_eio
+
+Repository: https://github.com/talex5/async_eio
+
+Async_eio allows running Async and Eio code together in a single domain. It allows converting existing code to Eio incrementally.
+
 ### Parany
 
 Repository: https://github.com/UnixJunkie/parany/tree/domains
 
 The Parany git branch called "domains" is compatible with multicore-ocaml.
+
+### OCaml Processor
+
+Repository: https://github.com/haesbaert/ocaml-processor
+
+The library allows you to query the processor topology as well as set the processor affinity for the current process.
 
 ## Testing
 
@@ -89,8 +129,27 @@ The Parany git branch called "domains" is compatible with multicore-ocaml.
 
 Repository: https://github.com/jmid/multicoretests
 
-Experimental property-based tests of (parts of) the OCaml multicore compiler. The project contains a randomized testsuite of OCaml 5.0 based on QCheck and 
-two reusable testing libraries `Lin` and `STM`.
+Experimental property-based tests of (parts of) the OCaml multicore compiler. The project contains a randomized testsuite of OCaml 5.0 based on QCheck and two reusable testing libraries `Lin` and `STM`.
+
+## Tooling
+
+### Olly
+
+Repository: https://github.com/sadiqj/runtime_events_tools
+
+A collection of observability tools around the runtime events tracing system introduced in OCaml 5.0.
+
+### Eio-console
+
+Repository: https://github.com/patricoferris/eio-console
+
+Eio-console provides an application for monitoring running programs. This works in the browser, communicating information over a websocket.
+
+### TSan
+
+Repository: https://github.com/OlivierNicole/ocaml-tsan
+
+ThreadSanitizer (TSan) is an effective approach to locate data races in parallel code. This extended version of the OCaml compiler generates instrumented executables that will print error reports if a data race is detected.
 
 ## Experiments
 
@@ -102,9 +161,9 @@ See also the [draft PR](https://github.com/aantron/dream/pull/194) that uses [Dr
 
 ### Cohttp
 
-Repository: https://github.com/bikallem/ocaml-cohttp/tree/eio-3
+Repository: https://github.com/mirage/ocaml-cohttp/tree/master/cohttp-eio
 
-Two PRs exist on the [cohttp repository](https://github.com/mirage/ocaml-cohttp) (an OCaml library for building HTTP servers and clients). One for adding a [direct-style implementation using just Eio](https://github.com/mirage/ocaml-cohttp/pull/857). Another to [convert the Lwt server implementation to direct-style](https://github.com/mirage/ocaml-cohttp/pull/854) using [lwt_eio](#lwt-eio).
+Cohttp has an Eio backend with support for client and server. Eio's Domain manager lets the Cohttp-eio backend use Multicore parallelism.
 
 ### Ppx_effects
 
@@ -129,6 +188,12 @@ Built on top of the continuations in Multicore OCaml, `ocaml-multicont` provides
 Repository: https://github.com/ocsigen/js_of_ocaml
 
 It is not immediately clear how (and when) effects will be supported in js_of_ocaml (an OCaml bytecode to Javascript compiler). [This discussion provides more information](https://discuss.ocaml.org/t/ocaml-multicore-effects-and-js-of-ocaml/8502). See also [some work on using CPS to achieve working Javascript](https://github.com/Armael/js_of_ocaml).
+
+### Mirage networking experiments
+
+Repository: https://github.com/TheLortex/networking-experiments
+
+Goal is to port Mirage's TCP/IP stack on top of OCaml 5's effects for more manageable async code.
 
 ## Ideas
 
