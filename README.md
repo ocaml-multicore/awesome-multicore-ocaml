@@ -145,6 +145,12 @@ Repository: https://github.com/patricoferris/eio-console
 
 Eio-console provides an application for monitoring running programs. This works in the browser, communicating information over a websocket.
 
+### TSan
+
+Repository: https://github.com/OlivierNicole/ocaml-tsan
+
+ThreadSanitizer (TSan) is an effective approach to locate data races in parallel code. This extended version of the OCaml compiler generates instrumented executables that will print error reports if a data race is detected.
+
 ## Experiments
 
 ### Dream
