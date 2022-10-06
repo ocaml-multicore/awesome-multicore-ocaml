@@ -161,9 +161,9 @@ See also the [draft PR](https://github.com/aantron/dream/pull/194) that uses [Dr
 
 ### Cohttp
 
-Repository: https://github.com/bikallem/ocaml-cohttp/tree/eio-3
+Repository: https://github.com/mirage/ocaml-cohttp/tree/master/cohttp-eio
 
-Two PRs exist on the [cohttp repository](https://github.com/mirage/ocaml-cohttp) (an OCaml library for building HTTP servers and clients). One for adding a [direct-style implementation using just Eio](https://github.com/mirage/ocaml-cohttp/pull/857). Another to [convert the Lwt server implementation to direct-style](https://github.com/mirage/ocaml-cohttp/pull/854) using [lwt_eio](#lwt-eio).
+Cohttp has an Eio backend with support for client and server. Eio's Domain manager lets the Cohttp-eio backend use Multicore parallelism.
 
 ### Ppx_effects
 
