@@ -30,6 +30,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
 - [Tooling](#tooling)
   - [Olly](#olly)
   - [Eio-console](#eio-console)
+  - [TSan](#tsan)
 - [Experiments](#experiments)
   - [Dream](#dream)
   - [Cohttp](#cohttp)
@@ -48,11 +49,11 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
 
 ## Installation
 
-The OCaml 5 compiler is currently at the `5.0.0~alpha1` release. The compiler can be obtained with the following instructions on Linux and Mac machines.
+The OCaml 5 compiler is currently at the `5.0.0~beta1` release. The compiler can be obtained with the following instructions on Linux and Mac machines.
 
 ```
 λ opam update
-λ opam switch create 5.0.0~alpha1 --repo=default,alpha=git+https://github.com/kit-ty-kate/opam-alpha-repository.git
+λ opam switch create 5.0.0~beta1 --repo=default,alpha=git+https://github.com/kit-ty-kate/opam-alpha-repository.git
 λ eval $(opam env)
 ```
 
