@@ -26,6 +26,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Parany](#parany)
   - [Processor](#ocaml-processor)
   - [cohttp-eio](#cohttp-eio)
+  - [mirage-crypto-rng-eio](#mirage-crypto-rng-eio)
 - [Testing](#testing)
   - [multicoretests](#multicoretests)
 - [Tooling](#tooling)
@@ -129,6 +130,12 @@ The library allows you to query the processor topology as well as set the proces
 Repository: https://github.com/mirage/ocaml-cohttp/tree/master/cohttp-eio
 
 `cohttp-eio` is a HTTP client and server library built using `eio`. It enables monad-less, direct style programming of multi-core capable HTTP web server and client applications. Monads be gone. 
+
+### mirage-crypto-rng-eio
+
+Repository: https://github.com/mirage/mirage-crypto/tree/main/rng/eio
+
+`mirage-crypto-rng-eio` allows to use various crypto functions in an `eio` application.
 
 ## Testing
 
