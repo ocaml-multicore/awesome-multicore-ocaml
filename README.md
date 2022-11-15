@@ -25,6 +25,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Async Support](#async-support)
   - [Parany](#parany)
   - [Processor](#ocaml-processor)
+  - [cohttp-eio](#cohttp-eio)
 - [Testing](#testing)
   - [multicoretests](#multicoretests)
 - [Tooling](#tooling)
@@ -33,7 +34,6 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [TSan](#tsan)
 - [Experiments](#experiments)
   - [Dream](#dream)
-  - [Cohttp](#cohttp)
   - [Ppx_effects](#ppx_effects)
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
@@ -124,6 +124,12 @@ Repository: https://github.com/haesbaert/ocaml-processor
 
 The library allows you to query the processor topology as well as set the processor affinity for the current process.
 
+### cohttp-eio
+
+Repository: https://github.com/mirage/ocaml-cohttp/tree/master/cohttp-eio
+
+`cohttp-eio` is a HTTP client and server library built using `eio`. It enables monad-less, direct style programming of multi-core capable HTTP web server and client applications. Monads be gone. 
+
 ## Testing
 
 ### Multicoretests
@@ -159,12 +165,6 @@ ThreadSanitizer (TSan) is an effective approach to locate data races in parallel
 Repository: https://github.com/talex5/dream/tree/eio
 
 See also the [draft PR](https://github.com/aantron/dream/pull/194) that uses [Dream](https://github.com/aantron/dream), Eio and [lwt_eio](#lwt-eio) to provide a direct-style interface to Dream.
-
-### Cohttp
-
-Repository: https://github.com/mirage/ocaml-cohttp/tree/master/cohttp-eio
-
-Cohttp has an Eio backend with support for client and server. Eio's Domain manager lets the Cohttp-eio backend use Multicore parallelism.
 
 ### Ppx_effects
 
