@@ -6,7 +6,7 @@ This repository collects useful libraries, ideas and experiments relating to the
 
 For contributing, [see the guide](https://github.com/patricoferris/awesome-multicore-ocaml/blob/main/CONTRIBUTING.md).
 
-If you are wondering what even is Multicore OCaml, you could start by watching [a video from 2014 about Multicore OCaml by Stephen Dolan and co.](https://watch.ocaml.org/videos/watch/490b5363-01b6-45d8-9b7e-c883a20026a1), then [one on how to parallelise your OCaml code](https://watch.ocaml.org/videos/watch/ce20839e-4bfc-4d74-925b-485a6b052ddf) and [how we can adapt the existing ecosystem to support Multicore OCaml](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02).
+If you are wondering what even is Multicore OCaml, you could start by watching [KC's keynote at ICFP 2022](https://www.youtube.com/watch?v=zJ4G0TKwzVc&t=2s). To know more about how Multicore OCaml evolved over the years, see [this video from 2014 about Multicore OCaml by Stephen Dolan and co.](https://watch.ocaml.org/videos/watch/490b5363-01b6-45d8-9b7e-c883a20026a1), then [one on how to parallelise your OCaml code](https://watch.ocaml.org/videos/watch/ce20839e-4bfc-4d74-925b-485a6b052ddf) and [how we can adapt the existing ecosystem to support Multicore OCaml](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02).
 
 For understanding effects in OCaml 5 you can watch [KC Sivaramakrishnan's Effective Programming in OCaml 5 talk](https://www.youtube.com/watch?v=xKUzN-McZUk) and also Thomas Leonard's talk at the [2021 OCaml Workshop](https://v3.ocaml.org/workshops/ocaml-workshop-2021) on [Experiences with Effects](https://watch.ocaml.org/videos/watch/74ece0a8-380f-4e2a-bef5-c6bb9092be89). Note both videos use a syntax for effects that will not exist in OCaml 5.00 (see also [ppx_effects](#ppx_effects)).
 
@@ -27,6 +27,8 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Processor](#ocaml-processor)
   - [cohttp-eio](#cohttp-eio)
   - [mirage-crypto-rng-eio](#mirage-crypto-rng-eio)
+  - [Js_of_ocaml support](#js_of_ocaml)
+  - [ocaml-tls](#ocaml-tls)
 - [Testing](#testing)
   - [multicoretests](#multicoretests)
 - [Tooling](#tooling)
@@ -38,8 +40,8 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Ppx_effects](#ppx_effects)
   - [Gemini Protocol](#gemini-protocol)
   - [Multi-shot Continuations](#multi-shot-continuations)
-  - [Js_of_ocaml support](#js_of_ocaml)
   - [Mirage network](#mirage-networking-experiments)
+  - [Capnp-rpc](#capnp-rpc)
 - [Ideas](#ideas)
   - [Non-blocking Codec](#non-blocking-codec)
 - [Resources](#resources)
@@ -50,15 +52,13 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
 
 ## Installation
 
-The OCaml 5 compiler is currently at the `5.0.0~beta1` release. The compiler can be obtained with the following instructions on Linux and Mac machines.
+OCaml 5 is out! The compiler can be obtained with the following instructions on Linux and Mac machines.
 
 ```
 λ opam update
-λ opam switch create 5.0.0~beta1 --repo=default,alpha=git+https://github.com/kit-ty-kate/opam-alpha-repository.git
+λ opam switch create 5.0.0
 λ eval $(opam env)
 ```
-
-If you're using opam version 2.0, please also add the beta repository during installation - `beta=git+https://github.com/ocaml/ocaml-beta-repository.git`
 
 ## Libraries
 
@@ -137,6 +137,19 @@ Repository: https://github.com/mirage/mirage-crypto/tree/main/rng/eio
 
 `mirage-crypto-rng-eio` allows to use various crypto functions in an `eio` application.
 
+### Js_of_ocaml
+
+Repository: https://github.com/ocsigen/js_of_ocaml
+
+`js_of_ocaml` supports effects through CPS transformations - this means one can start running effects in browsers! Implementation details can be found in [Jérôme Vouillon
+'s PR](https://github.com/ocsigen/js_of_ocaml/pull/1340)
+
+### ocaml-tls
+
+Repository: https://github.com/mirleft/ocaml-tls
+
+`tls_eio` supports effectful operations using Eio.
+
 ## Testing
 
 ### Multicoretests
@@ -191,17 +204,15 @@ Repository: https://github.com/dhil/ocaml-multicont
 
 Built on top of the continuations in Multicore OCaml, `ocaml-multicont` provides a library for using continuations that can be applied more than once. See also [this discussion on discuss](https://discuss.ocaml.org/t/multi-shot-continuations-gone-forever/9072).
 
-### Js_of_ocaml
-
-Repository: https://github.com/ocsigen/js_of_ocaml
-
-It is not immediately clear how (and when) effects will be supported in js_of_ocaml (an OCaml bytecode to Javascript compiler). [This discussion provides more information](https://discuss.ocaml.org/t/ocaml-multicore-effects-and-js-of-ocaml/8502). See also [some work on using CPS to achieve working Javascript](https://github.com/Armael/js_of_ocaml).
-
 ### Mirage networking experiments
 
 Repository: https://github.com/TheLortex/networking-experiments
 
 Goal is to port Mirage's TCP/IP stack on top of OCaml 5's effects for more manageable async code.
+
+### capnp-rpc
+
+Cap'n Proto is a capability-based RPC system with bindings for many languages. The [Eio port](https://github.com/mirage/capnp-rpc/pull/256) switches capnp-rpc from Lwt to Eio.
 
 ## Ideas
 
@@ -221,6 +232,15 @@ The [Multicore OCaml Wiki](https://github.com/ocaml-multicore/ocaml-multicore/wi
 
   - [Effects examples](https://github.com/ocaml-multicore/effects-examples): a collection of great examples with effects including cooperative threading and generators.
   - [Parallel Programming in Multicore OCaml](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml): a very good introduction to programming parallel programs in Multicore OCaml, including [using Domainslib](https://github.com/ocaml-multicore/parallel-programming-in-multicore-ocaml#domainslib).
+
+### Papers
+
+- [Retrofitting Effect Handlers onto OCaml](https://kcsrk.info/papers/retro-concurrency_pldi_21.pdf), PLDI, June 2021: Describes the design and evaluation of a full-fledged efficient implementation of effect handlers for OCaml.
+- [Parallelising your OCaml code with Multicore OCaml](https://github.com/ocaml-multicore/multicore-talks/blob/master/ocaml2020-workshop-parallel/multicore-ocaml20.pdf), OCaml Workshop, August 2020: A tour on developing parallel programs with Multicore OCaml.
+- [Retrofitting Parallelism onto OCaml](https://kcsrk.info/papers/retro-parallel_icfp_20.pdf), ICFP, August 2020: Deep dive into Multicore GC design. 
+- [Multicore OCaml memory model](http://kcsrk.info/papers/pldi18-memory.pdf), PLDI, June 2018: Describes the memory model for multicore OCaml programs. This memory model is much simpler than existing language memory models such as Java or C/C++11 without sacrificing performance. 
+- [Concurrent System Programming with Effect Handlers](http://kcsrk.info/papers/system_effects_feb_18.pdf), TFP, February 2018: Using effect handler for writing concurrent programs that interacts with the operating system.
+- [Multicore OCaml](https://ocaml.org/meetings/ocaml/2014/ocaml2014_1.pdf), OCaml workshop, September 2014.
 
 ### Discuss Threads
 
@@ -244,6 +264,8 @@ The OCaml monthlies are available on discuss: https://discuss.ocaml.org/tag/mult
 Repository: https://github.com/ocaml-bench/sandmark
 
 > Sandmark is a suite of OCaml benchmarks and a collection of tools to configure different compiler variants, run and visualise the results.
+
+Sandmark nightly runs the Sandmark benchmarks and visualises results: https://sandmark.tarides.com/?app=Home
 
 #### Http Benchmarks
 
