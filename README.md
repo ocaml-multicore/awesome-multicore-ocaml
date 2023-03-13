@@ -242,6 +242,26 @@ The [Multicore OCaml Wiki](https://github.com/ocaml-multicore/ocaml-multicore/wi
 - [Concurrent System Programming with Effect Handlers](http://kcsrk.info/papers/system_effects_feb_18.pdf), TFP, February 2018: Using effect handler for writing concurrent programs that interacts with the operating system.
 - [Multicore OCaml](https://ocaml.org/meetings/ocaml/2014/ocaml2014_1.pdf), OCaml workshop, September 2014.
 
+### Talks
+
+* Introduction to Eio, Thomas Leonard, February 2023. ([video](https://watch.ocaml.org/w/1k1T919WGXoT4tjnRZEmMd))
+* [k-CAS for sweat-free concurrent programming](https://gist.github.com/polytypic/3214389ad69b16d28b957ced86e1b1a4#k-cas-for-sweat-free-concurrent-programming), Vesa Karvonen, February 2023. ([video](https://watch.ocaml.org/w/nmtxFx5zDJLbEXRhraf3JU))
+* Retrofitting Concurrency – Lessons from the Engine Room, KC Sivaramakrishnana, September 2022. ([video](https://www.youtube.com/watch?v=zJ4G0TKwzVc&t))
+* [Experiences with Effects in OCaml](https://icfp21.sigplan.org/details/ocaml-2021-papers/16/Experiences-with-Effects), Thomas Leonard, August 2021. ([video](https://watch.ocaml.org/videos/watch/74ece0a8-380f-4e2a-bef5-c6bb9092be89))
+* [Parafuzz: Coverage-guided Property Fuzzing for Multicore OCaml programs](https://icfp21.sigplan.org/details/ocaml-2021-papers/9/Parafuzz-Coverage-guided-Property-Fuzzing-for-Multicore-OCaml-programs), KC Sivaramakrishnan, August 2021. ([video](https://watch.ocaml.org/videos/watch/c0d591e0-91c9-4eaa-a4d7-c4f514de0a57))
+* [Adapting the OCaml Ecosystem for Multicore OCaml](https://icfp21.sigplan.org/details/ocaml-2021-papers/7/Adapting-the-OCaml-ecosystem-for-Multicore-OCaml), Sudha Parimala, August 2021. ([video](https://watch.ocaml.org/videos/watch/629b89a8-bbd5-490d-98b0-d0c740912b02))
+* [Effective Programming in OCaml](https://kcsrk.info/slides/jet_brains_21.pdf), KC Sivaramakrishnan, April 2021. ([video](https://www.youtube.com/watch?v=plFFZcqBOyk))
+* [Multicore OCaml -- what's coming in 2021](https://speakerdeck.com/kayceesrk/multicore-ocaml-whats-coming-in-2021), KC Sivaramakrishnan, December 2020. ([video](https://www.youtube.com/watch?v=mel76DFerL0))
+* [Parallelising your OCaml code with Multicore OCaml](https://github.com/ocaml-multicore/multicore-talks/blob/master/ocaml2020-workshop-parallel/slides-with-speaker-notes.pdf), Sadiq Jaffar August 2020. ([video](https://www.youtube.com/watch?v=Z7YZR1q8wzI))
+* [Retrofitting parallelism onto OCaml](https://speakerdeck.com/kayceesrk/retrofitting-parallelism-onto-ocaml), KC Sivaramakrishnan, August 2020. ([video](https://www.youtube.com/watch?v=9ClMPz7QaIs))
+* [A deep dive into Multicore OCaml GC](https://speakerdeck.com/kayceesrk/multicore-ocaml-gc), KC Sivaramakrishnan, June 2017.
+* [Reagents: Lock-free programming for the masses](https://speakerdeck.com/kayceesrk/reagents-lock-free-programming-for-the-masses), KC Sivaramakrishnan, August 2016. ([video](https://www.youtube.com/watch?v=qRWTws_YPBA)).
+* [Arrows and Reagents](https://speakerdeck.com/kayceesrk/arrows-and-reagents), KC Sivaramakrishnan, March 2016.
+* [Concurrent & Multicore OCaml: A deep dive](https://speakerdeck.com/kayceesrk/concurrent-and-multicore-ocaml-a-deep-dive), KC Sivaramakrishnan, January 2016.
+* [Effective Concurrency with Algebraic Effects](http://kcsrk.info/slides/OCaml15.pdf), KC Sivaramakrishnan, OCaml Workshop, September 2015.
+* [Multicore OCaml](https://www.cl.cam.ac.uk/~sd601/papers/multicore_slides.pdf), Stephen Dolan, OCaml workshop, September 2014. ([video](https://www.youtube.com/watch?v=FzmQTC_X5R4&list=UUP9g4dLR7xt6KzCYntNqYcw)).
+
+
 ### Discuss Threads
 
 Recently, there has been a lot of great discussion on discuss.ocaml.org around OCaml 5, in particular what the ramifications of adding effects to the language will have to the ecosystem:
