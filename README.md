@@ -42,6 +42,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [Multi-shot Continuations](#multi-shot-continuations)
   - [Mirage network](#mirage-networking-experiments)
   - [Capnp-rpc](#capnp-rpc)
+  - [gRPC](#grpc)
 - [Ideas](#ideas)
   - [Non-blocking Codec](#non-blocking-codec)
 - [Resources](#resources)
@@ -213,6 +214,11 @@ Goal is to port Mirage's TCP/IP stack on top of OCaml 5's effects for more manag
 ### capnp-rpc
 
 Cap'n Proto is a capability-based RPC system with bindings for many languages. The [Eio port](https://github.com/mirage/capnp-rpc/pull/256) switches capnp-rpc from Lwt to Eio.
+
+### gRPC
+
+gRPC is a high performance, open source, general RPC framework that puts mobile and HTTP/2 first. The [EIO port](https://github.com/dialohq/ocaml-grpc/) adds native EIO support for OCaml gRPC.
+
 
 ## Ideas
 
