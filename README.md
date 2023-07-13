@@ -217,7 +217,7 @@ Cap'n Proto is a capability-based RPC system with bindings for many languages. T
 
 ### gRPC
 
-gRPC is a high performance, open source, general RPC framework that puts mobile and HTTP/2 first. The [EIO port](https://github.com/dialohq/ocaml-grpc/) adds native EIO support for OCaml gRPC.
+gRPC is a high performance, open source, general RPC framework that puts mobile and HTTP/2 first. The [Eio port](https://github.com/dialohq/ocaml-grpc/) adds native Eio support for OCaml gRPC.
 
 
 ## Ideas
