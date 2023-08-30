@@ -29,6 +29,7 @@ For more resources like this, check the [Multicore OCaml wiki](#wiki).
   - [mirage-crypto-rng-eio](#mirage-crypto-rng-eio)
   - [Js_of_ocaml support](#js_of_ocaml)
   - [ocaml-tls](#ocaml-tls)
+  - [algaeff](#algaeff)
 - [Testing](#testing)
   - [multicoretests](#multicoretests)
 - [Tooling](#tooling)
@@ -150,6 +151,12 @@ Repository: https://github.com/ocsigen/js_of_ocaml
 Repository: https://github.com/mirleft/ocaml-tls
 
 `tls_eio` supports effectful operations using Eio.
+
+### algaeff
+
+Repository: <https://github.com/RedPRL/algaeff>
+
+`algaeff` is a collection of well-known reusable effects-based components (states, generators, etc.) packaged as an OPAM library.
 
 ## Testing
 
